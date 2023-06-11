@@ -1,4 +1,4 @@
-import type { Repository } from '..';
+import type { Repository } from '../repository';
 
 export async function subscribeToAllMarketTickers(socket: any) {
   await socket?.send(

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { coinList } from 'src/domain/model';
 import type { Repository } from '../../domain/repository';
-import { setupWS } from 'src/domain/repository/useCase';
+import { setupWS } from 'src/domain/useCase';
 
 export function useWSModelController(repository: Repository) {
   const [currentCoins, setCurrentCoins] = useState<coinList | null>([]);
