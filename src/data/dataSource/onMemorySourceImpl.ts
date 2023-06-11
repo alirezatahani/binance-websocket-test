@@ -1,14 +1,15 @@
 import type { coinList } from '../../domain/model';
 import type { DataSource } from './dataSource';
+import { history } from '../../domain/model';
 
 export class OnMemoryDataSourceImpl implements DataSource {
   history: coinList = [];
 
-  async setHistory(history: coinList): Promise<void> {
+  async setHistory(history: history): Promise<void> {
     this.history = history;
   }
 
-  async getHistory(): Promise<coinList> {
+  async getHistory(): Promise<history> {
     return this.history;
   }
 }

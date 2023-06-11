@@ -2,9 +2,10 @@
   "name": "websocket-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "depcruise:validate": "depcruise src --include-only '^src' --config --output-type err-long",
+    "depcruise:tree": "depcruise src --include-only '^src' --config --output-type dot | dot -T svg > dependency-graph.svg && open dependency-graph.svg",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "babel-loader": "^8.2.5",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^6.7.1",
+    "dependency-cruiser": "^13.0.3",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.3.0",
@@ -40,6 +42,20 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.26",
+    "immutability-helper": "^3.1.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

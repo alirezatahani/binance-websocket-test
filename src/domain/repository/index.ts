@@ -1,5 +1,7 @@
-import type { coinList } from '../model';
+import { coinList, history } from '../../domain/model';
 
 export interface Repository {
-  getCurrentCoins(): Promise<coinList>;
+  getCurrentCoins(): Promise<history>;
+  setCurrentCoins(coins: coinList): Promise<void>;
+  dataSource?: any;
 }

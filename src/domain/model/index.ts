@@ -19,4 +19,5 @@ export type coin = {
   n: number; // Total number of trades
 };
 
-export type coinList = coin[] | [];
+export type coinList = coin[];
+export type history = coinList;
