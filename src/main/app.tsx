@@ -21,12 +21,8 @@ export const App: React.FC = () => {
   }, [isReady]);
 
   return (
-    <CoinList coins={val} />
-    // <WebsocketProvider>
-    //   <div>
-    //     {/* @ts-ignore */}
-    //     <CoinList coins={val} />
-    //   </div>
-    // </WebsocketProvider>
+    <WebsocketProvider>
+      <CoinList coins={val} />
+    </WebsocketProvider>
   );
 };
