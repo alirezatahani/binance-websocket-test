@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { coinList } from 'src/domain/model';
 import { Repository } from 'src/domain/repository';
-import { Coin } from 'src/presentation';
+import { Coin } from 'src/presentation/coin';
 import { useWSModelController } from '../hook';
 import { CoinListWrapper } from './coinList.styles';
 
