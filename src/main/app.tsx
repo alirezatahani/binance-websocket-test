@@ -3,6 +3,7 @@ import { CoinList } from '../presentation';
 import { WebsocketContext } from '../context/ws';
 import { WebsocketProvider } from '../context/ws';
 import { OnMemoryDataSourceImpl, RepositoryImpl } from 'src/data';
+import './style.css';
 
 // Dependency injection
 const dataSource = new OnMemoryDataSourceImpl();
