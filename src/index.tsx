@@ -1,8 +1,13 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { CoinList } from './components';
 
 const App: React.FC = () => {
-  return <div>Hello</div>;
+  return (
+    <div>
+      <CoinList />
+    </div>
+  );
 };
 
 const container = document.getElementById('app');
