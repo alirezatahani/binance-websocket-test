@@ -12,14 +12,14 @@ import {
 
 export const Coin: React.FC<{ coinData: coin }> = ({ coinData }) => {
   return (
-    <CoinWrapper>
+    <CoinWrapper key={coinData.s + coinData.c} sign={Number(coinData.P)}>
       <CoinNameWrapper>
         <CoinName>{coinData.s}</CoinName>
         <CoinDesc>Perpetual</CoinDesc>
       </CoinNameWrapper>
       <CoinPriceWrapper>
-        <CoinPrice>{coinData.c}</CoinPrice>
-        <CoinChanges>{coinData.P}%</CoinChanges>
+        <CoinPrice sign={Number(coinData.P)}>{coinData.c}</CoinPrice>
+        <CoinChanges sign={Number(coinData.P)}>{coinData.P}%</CoinChanges>
       </CoinPriceWrapper>
     </CoinWrapper>
   );

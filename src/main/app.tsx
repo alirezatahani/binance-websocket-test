@@ -3,6 +3,7 @@ import { CoinList } from '../presentation';
 import { WebsocketContext } from '../context/ws';
 import { WebsocketProvider } from '../context/ws';
 import { OnMemoryDataSourceImpl, RepositoryImpl } from 'src/data';
+import './style.css';
 
 // Dependency injection
 const dataSource = new OnMemoryDataSourceImpl();
@@ -21,12 +22,8 @@ export const App: React.FC = () => {
   }, [isReady]);
 
   return (
-    <CoinList coins={val} />
-    // <WebsocketProvider>
-    //   <div>
-    //     {/* @ts-ignore */}
-    //     <CoinList coins={val} />
-    //   </div>
-    // </WebsocketProvider>
+    <WebsocketProvider>
+      <CoinList coins={val} />
+    </WebsocketProvider>
   );
 };
