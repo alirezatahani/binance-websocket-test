@@ -1,16 +1,19 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { CoinList } from './components';
+import { App } from './main/app';
+import { WebsocketProvider } from './context/ws';
 
-const App: React.FC = () => {
+const Index: React.FC = () => {
   return (
-    <div>
-      <CoinList />
-    </div>
+    <React.StrictMode>
+      <WebsocketProvider>
+        <App />
+      </WebsocketProvider>
+    </React.StrictMode>
   );
 };
 
 const container = document.getElementById('app');
 const root = createRoot(container);
 
-root.render(<App />);
+root.render(<Index />);

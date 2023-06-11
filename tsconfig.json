@@ -16,13 +16,7 @@
     "lib": ["dom", "dom.iterable", "es6"],
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["src/components"],
-      "@assets/*": ["public/static/images/*"],
-      "@templates/*": ["src/templates/*"],
-      "@pages/*": ["src/pages/*"],
-      "@modules/*": ["src/modules/*"],
-      "@utils/*": ["src/utils/*"],
-      "@global/*": ["src/global/*"]
+      "@components/*": ["src/components"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

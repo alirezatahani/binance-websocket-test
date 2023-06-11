@@ -1,4 +1,5 @@
 import React from 'react';
+import { coin } from 'src/domain/model';
 import {
   CoinWrapper,
   CoinPriceWrapper,
@@ -9,16 +10,16 @@ import {
   CoinDesc,
 } from './coin.styles';
 
-export const Coin: React.FC = () => {
+export const Coin: React.FC<{ coinData: coin }> = ({ coinData }) => {
   return (
     <CoinWrapper>
       <CoinNameWrapper>
-        <CoinName>BTCUSDT</CoinName>
+        <CoinName>{coinData.s}</CoinName>
         <CoinDesc>Perpetual</CoinDesc>
       </CoinNameWrapper>
       <CoinPriceWrapper>
-        <CoinPrice>20,362.80</CoinPrice>
-        <CoinChanges>+2.08%</CoinChanges>
+        <CoinPrice>{coinData.c}</CoinPrice>
+        <CoinChanges>{coinData.P}%</CoinChanges>
       </CoinPriceWrapper>
     </CoinWrapper>
   );
